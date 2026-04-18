@@ -1,0 +1,12 @@
+[build]
+  base = "focus-bloom-da923a1d-main"
+  command = "npm run build"
+  publish = ".output/public"
+
+[build.environment]
+  NITRO_PRESET = "netlify"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/server"
+  status = 200
